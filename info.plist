@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>live.hypc.gitea.alfredworkflow</string>
+	<key>connections</key>
+	<dict>
+		<key>21A94EDF-D019-4015-B9D0-7061E3A5D088</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>66FB15D4-1BF2-4008-A2EC-423E3D45B0CD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>hypc</string>
+	<key>description</key>
+	<string>Gitea Repo Search</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Gitea</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>gitea</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>1</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>Searching for '{query}'</string>
+				<key>script</key>
+				<string>python main.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Search gitea for '{query}'</string>
+				<key>title</key>
+				<string>Search gitea</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>21A94EDF-D019-4015-B9D0-7061E3A5D088</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>66FB15D4-1BF2-4008-A2EC-423E3D45B0CD</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>使用前需要先设置以下环境变量：
+
+* `GITEA_DOMAIN`: gitea服务器地址
+* `ACCESS_TOKEN`: access_token
+
+## Commands
+
+* `gitea {query}`: 搜索相关项目</string>
+	<key>uidata</key>
+	<dict>
+		<key>21A94EDF-D019-4015-B9D0-7061E3A5D088</key>
+		<dict>
+			<key>xpos</key>
+			<integer>60</integer>
+			<key>ypos</key>
+			<integer>55</integer>
+		</dict>
+		<key>66FB15D4-1BF2-4008-A2EC-423E3D45B0CD</key>
+		<dict>
+			<key>xpos</key>
+			<integer>315</integer>
+			<key>ypos</key>
+			<integer>55</integer>
+		</dict>
+	</dict>
+	<key>variables</key>
+	<dict>
+		<key>ACCESS_TOKEN</key>
+		<string></string>
+		<key>GITEA_DOMAIN</key>
+		<string></string>
+	</dict>
+	<key>variablesdontexport</key>
+	<array>
+		<string>ACCESS_TOKEN</string>
+		<string>GITEA_DOMAIN</string>
+	</array>
+	<key>version</key>
+	<string>0.1.0</string>
+	<key>webaddress</key>
+	<string>https://github.com/hypc/alfred-gitea-workflow</string>
+</dict>
+</plist>
