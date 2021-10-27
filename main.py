@@ -13,7 +13,7 @@ repos_search_uri = '/api/v1/repos/search'
 def search_repos(query):
     def _inner():
         url = '%s%s' % (GITEA_DOMAIN, repos_search_uri)
-        return web.get(url, params={'q': query, 'access_token': ACCESS_TOKEN}).json()
+        return web.get(url, params={'q': query, 'access_token': ACCESS_TOKEN, 'sort': 'updated', 'order': 'desc'}).json()
 
     return _inner
 
